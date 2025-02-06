@@ -28,6 +28,7 @@ app.get("/:page?", (req, res) => {
   res.sendFile(filePath, (err) => {
     if (err) {
       res.status(404).sendFile(path.join(__dirname, "404.html"));
+      res.redirect(path.joib(__dirname, "test.html"));
     }
   });
 });
